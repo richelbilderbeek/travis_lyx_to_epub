@@ -2,14 +2,16 @@
 
 [![Travis CI logo](TravisCI.png)](https://travis-ci.org)
 
-[![Build Status](https://travis-ci.org/richelbilderbeek/travis_lyx_to_epub.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_lyx_to_epub) (should fail)
+[![Build Status](https://travis-ci.org/richelbilderbeek/travis_lyx_to_epub.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_lyx_to_epub)
 
 Minimal project that converts a LyX document that is converted to PDF and is tested by Travis CI.
 
-This project does not and connot work, because LyX cannot convert to EPUB directly. Use [travis_pandoc_lyx_to_epub](https://github.com/richelbilderbeek/travis_pandoc_lyx_to_epub) instead,
-which lets LyX create a TeX file, then uses `pandoc` to convert to EPUB.
+This process must be done in two steps, because LyX cannot convert to EPUB directly:
 
-This GitHub is part of [the Travis Tutorial](https://github.com/richelbilderbeek/travis_tutorial)
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_lyx_to_tex.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_lyx_to_tex)  [travis_lyx_to_tex](https://github.com/richelbilderbeek/travis_lyx_to_text) converts LyX to Tex
+ * [![Build Status](https://travis-ci.org/richelbilderbeek/travis_tex_to_epub.svg?branch=master)](https://travis-ci.org/richelbilderbeek/travis_tex_to_epub)  [travis_tex_to_epub](https://github.com/richelbilderbeek/travis_tex_to_epubt) converts TeX to EPUB
+
+This GitHub is part of [the Travis Tutorial](https://github.com/richelbilderbeek/travis_tutorial).
 
 ## More specific setup
 
